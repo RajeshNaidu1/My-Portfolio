@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2d55b5a4df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span>Rajesh</span>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="headerText">
+                <p style="color:#ff004f;">Software Developer</p>
+                <h1 style="color:#ff004f;">Maddila Rajesh Naidu</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a final-year CSE student at IIIT Dharwad, passionate about MERN stack web development and React Native app creation. Proficient in front-end and back-end technologies, I craft dynamic web applications with seamless user experiences. Skilled in React Native, I design cross-platform mobile apps that bridge devices. With a commitment to continuous learning, I contribute effectively in team collaborations and look forward to a career focused on impactful digital experiences.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>FullStack Developer</span><br>Hands-on Experience on MERN(MongoDB, ExpressJS, ReactJS, NodeJS) stack</li>
+                            <li><span>Competitive Programmer</span><br>Learning Data Structers and Algorithms and solved around 300 question over various coding platforms</li>
+                            <!-- <li><span>App Developer</span><br>Developing Mobile Apps</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Full-stack developer in Velocity<br><br>Developed websites for other clubs in our university. We work as groups to build websites and conduct interesting
+                                events and competitions for upcoming juniors who are interested in web development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-Current</span><br>IIIT Dharwad</li>
+                            <li><span>2018-2020</span><br>Sri Chaitanya Junior College</li>
+                            <li><span>2018</span><br>Sri Chaitanya High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Full-Stack Developer</h2>
+                    <p>
+                        Developing websites using MongoDB, ExpressJS, ReactJS, ExpressJS. Developed blogging websites, Simulation website, News website, etc.. Completed a certification course in Udemy.
+                    </p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Application Developer</h2>
+                    <p>
+                        Developing andriod apps using React Native. Created apps like password generator, music app, etc..
+                    </p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Competitive Programming</h2>
+                    <p>
+                        Solving problems in various coding platforms like leetcode, code studio using C++. Solved around 300 problems.
+                    </p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/Screenshot 2023-08-08 233126.png">
+                    <div class="layer">
+                        <h3>Stock News and Blog Website</h3>
+                        <p>Developed a news site that gives you updated news about the stocks of a company,
+                            decisions made by entrepreneurs, and many more. Users can log into the website with the required credentials and
+                            get the news about the stocks. In addition to that users can read and write the blogs and they can bookmark them
+                            as well.</p>
+                        <a href="https://github.com/RajeshNaidu1/Stock-News-and-Details"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/Screenshot 2023-08-08 232813.png">
+                    <div class="layer">
+                        <h3>Simulation of Network Protocols</h3>
+                        <p>Build a website that shows how the protocols of the computer networks work,
+                            It includes the protocols like stop and wait, go back N, Count to infinity, etc.. with the help of this website learner
+                            can easily understand how the protocol works in different environments.</p>
+                        <a href="https://rajeshnaidu1.github.io/DataNetworks_Project/index.html"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-3.png">
+                    <div class="layer">
+                        <h3>Password Generator</h3>
+                        <p>Developed an app using React native framework, this app will take the input from user such as length of password and check 
+                            marks like whether to include lowercase, uppercase, numbers and special characters in the password. The app will generate 
+                            the password according to the inputs and we can copy and paste wherever it needed.</p>
+                        <a href="https://github.com/RajeshNaidu1/Password-Generator"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/RajeshNaidu1" class="btn">See more...</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>rajeshnaidumaddila@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 7386292575</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/rajesh-naidu-maddila-376aa1202/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/RajeshNaidu1"><i class="fa-brands fa-square-github"></i></i></a>
+                        <a href="https://www.instagram.com/rajesh28_12/"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <a href="./images/MADDILA RAJESH NAIDU (2).pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your Email" required>
+                        <textarea rows="6" name="Message" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Made my Rajesh Naidu</p>
+        </div>
+    </div>
+
+    <script>
+        var tabLinks=document.getElementsByClassName("tab-links");
+        var tabContents=document.getElementsByClassName("tab-contents");
+        function opentab(tabName){
+            for(tabLink of tabLinks){
+                tabLink.classList.remove("active-link");
+            }
+            for(tabContent of tabContents){
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
