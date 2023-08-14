@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <span>Rajesh</span>
-                <ul>
+                <ul id="sideMenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="headerText">
                 <p style="color:#ff004f;">Software Developer</p>
@@ -151,12 +153,13 @@
                     <a href="./images/MADDILA RAJESH NAIDU.pdf" download class="btn btn2">Download Resume</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Enter your name" required>
-                        <input type="email" name="email" placeholder="Enter your Email" required>
+                        <input type="email" name="Email" placeholder="Enter your Email" required>
                         <textarea rows="6" name="Message" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -179,5 +182,31 @@
             document.getElementById(tabName).classList.add("active-tab");
         }
     </script>
+    <script>
+        var sidemenu=document.getElementById("sideMenu");
+        function openMenu(){
+            sidemenu.style.right="0"
+        }
+        function closeMenu(){
+            sidemenu.style.right="-200px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyH75N6QNoL10WwP1OMICPhghQ41daXH4qmebv1cmZHa5xu8MluH6xpJmqIfOBY63-X/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
